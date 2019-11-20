@@ -543,7 +543,7 @@ class Fuzzer(object):
 
         # increment the fuzzer ID
         self.fuzz_id += 1
-
+        l.info(os.environ) #print(os.environ)
         outfile = os.path.join(self.job_dir, outfile)
         with open(outfile, "w") as fp:
             return subprocess.Popen(args, stdout=fp, close_fds=True)
